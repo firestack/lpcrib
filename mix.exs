@@ -49,6 +49,7 @@ defmodule LPCrib.MixProject do
 			{:postgrex, ">= 0.0.0"},
 			{:telemetry_metrics, "~> 1.0"},
 			{:telemetry_poller, "~> 1.0"},
+			{:typed_ecto_schema, "~> 0.4.1"}
 		]
 	end
 

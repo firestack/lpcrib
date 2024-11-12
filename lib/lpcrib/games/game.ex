@@ -1,10 +1,8 @@
 defmodule LPCrib.Games.Game do
-	use Ecto.Schema
+	use LPCrib.Schema
 	import Ecto.Changeset
 
-	@primary_key {:id, :binary_id, autogenerate: true}
-	@foreign_key_type :binary_id
-	schema "games" do
+	typed_schema "games" do
 		timestamps(type: :utc_datetime_usec)
 	end
 
