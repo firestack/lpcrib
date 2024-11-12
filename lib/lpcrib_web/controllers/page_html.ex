@@ -1,10 +1,10 @@
 defmodule LPCribWeb.PageHTML do
-  @moduledoc """
-  This module contains pages rendered by PageController.
+	@moduledoc """
+	This module contains pages rendered by PageController.
 
-  See the `page_html` directory for all templates available.
-  """
-  use LPCribWeb, :html
+	See the `page_html` directory for all templates available.
+	"""
+	use LPCribWeb, :html
 
-  embed_templates "page_html/*"
+	embed_templates "page_html/*"
 end

@@ -8,35 +8,35 @@
 import Config
 
 config :lpcrib,
-  namespace: LPCrib,
-  ecto_repos: [LPCrib.Repo],
-  generators: [timestamp_type: :utc_datetime_usec, binary_id: true]
+	namespace: LPCrib,
+	ecto_repos: [LPCrib.Repo],
+	generators: [timestamp_type: :utc_datetime_usec, binary_id: true]
 
 # Configures the endpoint
 config :lpcrib, LPCribWeb.Endpoint,
-  url: [host: "localhost"],
-  adapter: Bandit.PhoenixAdapter,
-  render_errors: [
-    formats: [html: LPCribWeb.ErrorHTML, json: LPCribWeb.ErrorJSON],
-    layout: false
-  ],
-  pubsub_server: LPCrib.PubSub,
-  live_view: [signing_salt: "4BmPwJwd"]
+	url: [host: "localhost"],
+	adapter: Bandit.PhoenixAdapter,
+	render_errors: [
+		formats: [html: LPCribWeb.ErrorHTML, json: LPCribWeb.ErrorJSON],
+		layout: false
+	],
+	pubsub_server: LPCrib.PubSub,
+	live_view: [signing_salt: "4BmPwJwd"]
 
 # Configure esbuild (the version is required)
 config :esbuild,
-  version: "0.17.11",
-  lpcrib: [
-    args:
-      ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
-    cd: Path.expand("../assets", __DIR__),
-    env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
-  ]
+	version: "0.17.11",
+	lpcrib: [
+		args:
+			~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
+		cd: Path.expand("../assets", __DIR__),
+		env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
+	]
 
 # Configures Elixir's Logger
 config :logger, :console,
-  format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id]
+	format: "$time $metadata[$level] $message\n",
+	metadata: [:request_id]
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
