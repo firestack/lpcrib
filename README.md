@@ -16,3 +16,15 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+# TODO
+- [ ] 2 Player Game
+	- [ ] A deck
+	- [ ] Draw
+	- [ ] Shuffle
+	- [ ] Cut
+	- [ ] Deal
+	- [ ] Count
+	- [ ] 
+
+	- [ ] Implement "Muggins"
