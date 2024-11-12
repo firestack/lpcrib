@@ -3,7 +3,7 @@ defmodule LPCrib.Games.Game do
 	import Ecto.Changeset
 
 	typed_schema "games" do
-		timestamps(type: :utc_datetime_usec)
+		timestamps()
 	end
 
 	@doc false
